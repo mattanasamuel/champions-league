@@ -46,9 +46,22 @@ async function getRemoteData() {
 /* carica negli elementi select le opzioni per le stagioni ed i team */ 
 function caricaOpzioniTeamSeason(){
   //TODO Caricare opzioni stagione
-  
-  //TODO Caricare opzioni squadra 
+  for(const stagione of listaSeason)
+  {
+    var opzione = document.createElement("option")
+    opzione.innerText = stagione
+    opzione.value = stagione
+    selStagione.appendChild(opzione)
+  }
 
+  //TODO Caricare opzioni squadra 
+  for(var i=0; i<listaTeam.length; i++)
+  {
+    var opzione = document.createElement("option")
+    opzione.innerText = listaTeam[i];
+    opzione.value = listaTeamId[i];
+    selTeam.appendChild(opzione);
+  }
 }
 
 /* riceve un elemento select e restituisce il testo dell'opzione selezionata */
@@ -60,13 +73,27 @@ function getSelectedOptionText(selectElement) {
 }
 
 function setUrl(){
+  
+  
+  requestURL = "DATA_JSON/Season" + selStagione.value + "/" + selTeam.innerText + 
+  
   requestURL = "DATA_JSON/Season_2024/AFC_Bournemouth_989_2024.json";
   //TODO comporre l'URL in base a stagioe e squadra selezionati
+
+
+
+
+
+
 }
 
 /* carica i dati della squadra reperiti dal server (contenuti nell'oggetto team) */
 function loadTeamSelected(){
   //TODO
+
+
+
+
   var tabella = document.createElement("table")
 
   var tabella_intestazione = document.createElement("thead");
