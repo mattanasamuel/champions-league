@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+
+</head>
+
+<body>
+
+
+    <header>
+        <div class="container m-5">
+            <img src="imgs/Premier_League-Logo.png" class="img-thumbnail" width = "15%" height="15%"/>
+            <h1>All Premier League teams and players (1992-2024)</h1>
+        </div>
+        <div class="container my-3">
+            <label for="sel-stagione">Stagione</label>
+            <select name="stagione" id="sel-stagione" class="form-select form-select-sm">
+               <!-- <option value="">--Seleziona stagione--</option> -->
+            </select>
+        </div>
+        <div class="container my-3">
+            <label for="sel-team">Team</label>
+            <select name="team" id="sel-team" class="form-select form-select-sm">
+                <!-- <option value="">--Seleziona team--</option> -->
+            </select>
+        </div>
+    </header>
+    <div class="containe mx-5">
+        <button type="button" class="btn btn-success my-3" id="btnLoad">Carica</button>
+    </div>
+    <section class="container">
+        <div id="elenco"></div>
+    </section>
+
+    <script src = "js/bootstrap.js"></script>
+    <script src = "scripts/scripts.js"></script>
+</body>
+
+</html>
